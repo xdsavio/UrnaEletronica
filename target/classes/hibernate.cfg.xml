@@ -4,7 +4,7 @@
 	<session-factory>
 
 		<property name="connection.url">jdbc:mysql://localhost:3306/urnaeletronica</property>
-		<property name="connection.username">root</property>
+		<property name="connection.username">Jigglypuff</property>
 		<property name="connection.password"></property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -31,6 +31,9 @@
 
 		<!-- Entidades -->
 		<mapping class="br.edu.ifpb.urnaeletronica.entidade.Pessoa" />
+		<mapping class="br.edu.ifpb.urnaeletronica.entidade.Eleitor" />
+		<mapping class="br.edu.ifpb.urnaeletronica.entidade.Candidato" />
+		<mapping class="br.edu.ifpb.urnaeletronica.entidade.Voto" />
 
 	</session-factory>
 </hibernate-configuration>

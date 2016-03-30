@@ -1,0 +1,41 @@
+package br.edu.ifpb.urnaeletronica.entidade;
+
+public class Candidato extends Pessoa{
+	private String cnpj;
+	private int numero;
+	private String cargo;
+	private String partido;
+
+	public String getCnpj() {
+		return cnpj;
+	}
+	
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+	
+	public int getNumero() {
+		return numero;
+	}
+	
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	
+	public String getCargo() {
+		return cargo;
+	}
+	
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+	
+	public String getPartido() {
+		return partido;
+	}
+	
+	public void setPartido(String partido) {
+		this.partido = partido;
+	}
+
+}
