@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
-</head>
-<body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<h:meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Urna de Votação - Sessão 2</title>
+</h:head>
+<h:body>
+	<h1>Urna Eletrônica - Sessão de Votação 02</h1>
+	<h3>Sessão de Votação 02, para eleitores cadastrados entre as letras M - Z.</h3>
+	<h:form id="form">
+		<h:outputText value="Votar : " />
+		<h:inputText id="input" value="${sessao2Bean.userInput}" />
+		<h:commandButton value="Votar" action="${sessao2Bean.submit}"
+			onclick="return check();" />
+		<h:outputText value="${sessao2Bean.userInput}" />
 
-</body>
+	</h:form>
+</h:body>
 </html>

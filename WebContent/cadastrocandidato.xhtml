@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<h:meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Cadastro de Candidatos</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:messages id="messages" />
+		<p:panelGrid columns="2">
+
+			<p:outputLabel for="cargo" value="Cargo a exercer:" />
+			<p:inputText id="cargo" value="#{PessoaBean.candidato.cargo}" />
+
+			<p:outputLabel for="cnpj" value="CNPJ:" />
+			<p:spinner id="cnpj" value="#{PessoaBean.candidato.cnpj}" />
+
+			<p:outputLabel for="numero" value="Número:" />
+			<p:spinner id="numero" value="#{PessoaBean.candidato.numero}" />
+
+			<p:outputLabel for="partido" value="Partido Politico:" />
+			<p:inputText id="partido" value="#{PessoaBean.candidato.partido}" />
+			
+			</p:commandButton>
+
+		</p:panelGrid>
+	</h:form>
+</h:body>
+</html>
