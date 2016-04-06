@@ -15,20 +15,20 @@
 			<h:panelGrid columns="2" cellpadding="5">
 			
 				<h:outputLabel value="Digite seu nome:"/>
-				<p:inputText value="#{eleitorBean.eleitor.nome}"/>
+				<p:inputText value="#{EleitorBean.eleitor.nome}"/>
 				
 				<h:outputLabel value="Digite seu endereço:"/>
-				<p:inputText value="#{eleitorBean.eleitor.endereco}"/>
+				<p:inputText value="#{EleitorBean.eleitor.endereco}"/>
 				
 				<h:outputLabel value="Digite seu cpf:"/>
-				<p:inputMask value="#{eleitorBean.eleitor.cpf}" mask="999.999.999-99"/>
+				<p:inputMask value="#{EleitorBean.eleitor.cpf}" mask="999.999.999-99"/>
 				
 				<h:outputLabel value="Digite o número do seu título de eleitor:"/>
-				<p:inputMask value="#{eleitorBean.eleitor.titulo_votacao}" mask="9999.9999.9999"/>
+				<p:inputMask value="#{EleitorBean.eleitor.tituloVotacao}" mask="9999.9999.9999"/>
 				
 				<p:growl id="growl" life="2000" />
 				<p:commandButton value="Cadastrar" update="growl" 
-				actionListener="#{eleitorBean.cadastrarEleitor}" styleClass="ui-priority-primary" />
+				actionListener="#{EleitorBean.cadastrarEleitor}" styleClass="ui-priority-primary" />
 			
 			</h:panelGrid>
 		</h:form>
