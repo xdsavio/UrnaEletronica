@@ -15,30 +15,31 @@
 			<h:panelGrid columns="2" cellpadding="5">
 			
 				<h:outputLabel value="Digite seu nome:"/>
-				<p:inputText value="#{candidatoBean.candidato.nome}"/>
+				<p:inputText value="#{CandidatoBean.candidato.nome}"/>
 				
 				<h:outputLabel value="Digite seu endereço:"/>
-				<p:inputText value="#{candidatoBean.candidato.endereco}"/>
+				<p:inputText value="#{CandidatoBean.candidato.endereco}"/>
 				
 				<h:outputLabel value="Digite seu cpf:"/>
-				<p:inputMask value="#{candidatoBean.candidato.cpf}" mask="999.999.999-99"/>
+				<p:inputMask value="#{CandidatoBean.candidato.cpf}" mask="999.999.999-99"/>
 				
 				<h:outputLabel value="Digite o número do seu título de eleitor:"/>
-				<p:inputMask value="#{candidatoBean.candidato.titulo_votacao}" mask="9999.9999.9999"/>
+				<p:inputMask value="#{CandidatoBean.candidato.tituloVotacao}" mask="9999.9999.9999"/>
 				
 				<h:outputLabel value="Digite seu número de campanha:"/>
-				<p:inputText value="#{candidatoBean.candidato.numero}"/>
+				<p:inputText value="#{CandidatoBean.candidato.numero}"/>
 				
 				<h:outputLabel value="Digite seu cargo:"/>
-	       	    <p:selectOneMenu id="cargo" value="#{candidatoBean.candidato.cargo}" style="width:200px">
+	       	    <p:selectOneMenu id="cargo" value="#{CandidatoBean.candidato.cargo}" style="width:200px">
 		            <f:selectItem itemLabel="Selecione o cargo" itemValue="" />
 		            <f:selectItem itemLabel="Presidente" itemValue="Presidente" />
 		            <f:selectItem itemLabel="Governador" itemValue="Governador" />
+		            <f:selectItem itemLabel="Prefeito" itemValue="Prefeito" />
 	        	</p:selectOneMenu>
 				
 				<p:growl id="growl" life="2000" />
 				<p:commandButton value="Cadastrar" update="growl" 
-				actionListener="#{candidatoBean.cadastrarCandidato}" styleClass="ui-priority-primary" />
+				actionListener="#{CandidatoBean.cadastrarCandidato}" styleClass="ui-priority-primary" />
 			
 			</h:panelGrid>
 		</h:form>
