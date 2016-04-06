@@ -15,11 +15,11 @@
 		<h:form>
 			<p:panel>
 				<h2>Informe seu título de eleitor</h2>
-				<p:inputMask value="#{votacaoBean.eleitor.titulo_votacao}" mask="9999.9999.9999"/>
+				<p:inputMask value="#{SessaoBean.eleitor.titulo_votacao}" mask="9999.9999.9999"/>
 				
 				<p:growl id="growl" life="2000" />
 				<p:commandButton value="Votar" update="growl" 
-					actionListener="#{votacaoBean.verificarTitulo}" styleClass="ui-priority-primary" />
+					actionListener="#{SessaoBean.verificarTitulo}" styleClass="ui-priority-primary" />
 			</p:panel>
 		</h:form>
 	</ui:define>
