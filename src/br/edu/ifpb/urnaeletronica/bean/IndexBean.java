@@ -34,6 +34,10 @@ public class IndexBean {
 		response.sendRedirect("entrarvotacao.xhtml");
 	}
 	
+	public void toVotacao (){
+		response.sendRedirect("votacao.xhtml");
+	}
+	
 	public void setOutcome(String outcome) {
 
 		this.outcome = outcome;
