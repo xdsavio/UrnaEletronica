@@ -7,21 +7,21 @@
 	template="template.xhtml">
 	
 	<ui:define name="title">
-		Remover Usu·rio
+		Remover Usu√°rio
 	</ui:define>
 	
 	<ui:define name="conteudo">
 		<h:form>      
-		    <p:panel id="panel" header="Insira o ID do usu·rio que ser· removido" style="margin-bottom:10px;">
+		    <p:panel id="panel" header="Insira o ID do usu√°rio que ser√° removido" style="margin-bottom:10px;">
 		        <p:messages id="messages" />
 		        <h:panelGrid columns="4" cellpadding="5">
 		            <h:outputLabel for="txt1" value="ID: *" />
-		            <p:inputText id="txt1" value="#{eleitorBean.eleitor.id}" required="true" label="Text 1">
+		            <p:inputText id="txt1" value="#{EleitorBean.eleitor.id}" required="true" label="Text 1">
 		                <f:validateLength minimum="2" />
 		            </p:inputText>
 		            <p:growl id="growl" life="2000" />
 					<p:commandButton value="Deletar" update="growl" 
-						actionListener="#{eleitorBean.deletarEleitor}" styleClass="ui-priority-primary" />
+						actionListener="#{EleitorBean.deletarEleitor}" styleClass="ui-priority-primary" />
 		        </h:panelGrid>
 		    </p:panel>
 		</h:form>
