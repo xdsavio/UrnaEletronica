@@ -18,8 +18,10 @@
 				<p:inputMask value="#{SessaoBean.eleitor.titulo_votacao}" mask="9999.9999.9999"/>
 				
 				<p:growl id="growl" life="2000" />
-				<p:commandButton value="Votar" update="growl" 
+				<p:commandButton value="Verificar titulo" update="growl" 
 					actionListener="#{SessaoBean.verificarTitulo}" styleClass="ui-priority-primary" />
+			        <p:commandButton value="Votar" update="growl" actionListener="#{IndexBean.toVotacao}" styleClass="ui-priority-primary" />
+			
 			</p:panel>
 		</h:form>
 	</ui:define>
