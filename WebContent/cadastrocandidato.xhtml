@@ -1,34 +1,46 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<?xml version="1.0" encoding="utf-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
-<h:head>
-	<h:meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Cadastro de Candidatos</title>
-</h:head>
-
-<h:body>
-	<h:form>
-		<p:messages id="messages" />
-		<p:panelGrid columns="2">
-
-			<p:outputLabel for="cargo" value="Cargo a exercer:" />
-			<p:inputText id="cargo" value="#{PessoaBean.candidato.cargo}" />
-
-			<p:outputLabel for="cnpj" value="CNPJ:" />
-			<p:spinner id="cnpj" value="#{PessoaBean.candidato.cnpj}" />
-
-			<p:outputLabel for="numero" value="N�mero:" />
-			<p:spinner id="numero" value="#{PessoaBean.candidato.numero}" />
-
-			<p:outputLabel for="partido" value="Partido Politico:" />
-			<p:inputText id="partido" value="#{PessoaBean.candidato.partido}" />
+	xmlns:p="http://primefaces.org/ui"
+	template="template.xhtml">
+	
+	<ui:define name="title">
+		Cadastro Candidato
+	</ui:define>
+	
+	<ui:define name="conteudo">
+		<h:form>
+			<h:panelGrid columns="2" cellpadding="5">
 			
-			</p:commandButton>
-
-		</p:panelGrid>
-	</h:form>
-</h:body>
-</html>
+				<h:outputLabel value="Digite seu nome:"/>
+				<p:inputText value="#{candidatoBean.candidato.nome}"/>
+				
+				<h:outputLabel value="Digite seu endereço:"/>
+				<p:inputText value="#{candidatoBean.candidato.endereco}"/>
+				
+				<h:outputLabel value="Digite seu cpf:"/>
+				<p:inputMask value="#{candidatoBean.candidato.cpf}" mask="999.999.999-99"/>
+				
+				<h:outputLabel value="Digite o número do seu título de eleitor:"/>
+				<p:inputMask value="#{candidatoBean.candidato.titulo_votacao}" mask="9999.9999.9999"/>
+				
+				<h:outputLabel value="Digite seu número de campanha:"/>
+				<p:inputText value="#{candidatoBean.candidato.numero}"/>
+				
+				<h:outputLabel value="Digite seu cargo:"/>
+	       	    <p:selectOneMenu id="cargo" value="#{candidatoBean.candidato.cargo}" style="width:200px">
+		            <f:selectItem itemLabel="Selecione o cargo" itemValue="" />
+		            <f:selectItem itemLabel="Presidente" itemValue="Presidente" />
+		            <f:selectItem itemLabel="Governador" itemValue="Governador" />
+	        	</p:selectOneMenu>
+				
+				<p:growl id="growl" life="2000" />
+				<p:commandButton value="Cadastrar" update="growl" 
+				actionListener="#{candidatoBean.cadastrarCandidato}" styleClass="ui-priority-primary" />
+			
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

@@ -1,11 +1,70 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="template.xhtml">
+	
+	<ui:define name="title">
+		Página Principal
+	</ui:define>
+	
+	<ui:define name="conteudo">
+		<p:panel>
+			<h2>Bem vindo à Urna Eletrônica</h2>
+			<h:form>
+			    <p:growl id="messages" showDetail="true"/>
+	 		<p:spacer width="100" height="50" />
+			    <p:menuButton value="Cadastrar">
+			        <p:menuitem value="Eleitor" actionListener="#{indexBean.toCadastrarEleitor}" update="messages" />
+			        <p:menuitem value="Candidato" actionListener="#{indexBean.toCadastrarCandidato}" update="messages"/>
+			    </p:menuButton>
+			    <p:growl id="growl" life="2000" />
+			    <p:spacer width="20" height="50" />
+	     	    <p:commandButton value="Deletar" id="ajax" update="growl" actionListener="#{indexBean.toDeletar}" styleClass="ui-priority-primary" />
+	     	    <p:spacer width="20" height="50" />
+	     	    <p:commandButton value="Iniciar uma Eleição"  update="growl" actionListener="#{indexBean.toEntrarEleicao}" styleClass="ui-priority-primary" />
+			</h:form>
+		</p:panel>
+		<p:spacer width="100" height="20" />
+	</ui:define>
+</ui:composition>
+=======
+<?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Urna Eletronica</title>
-</head>
-<body>
-
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:p="http://primefaces.org/ui">  
+      
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Menu</title>
+	</h:head>
+	<h:body>
+		<div id="pagina">
+			
+			<div id="topo">
+				<ui:insert name="topo">
+					<h1>MENU</h1>
+				</ui:insert>
+			</div>
+			
+			<div id="conteudo">
+				<ui:insert name="conteudo">
+					<p:button outcome="cadastro" value="Cadastro" icon="ui-icon-plus"></p:button>
+					<p:button outcome="votacao" value="Iniciar Votação" icon="ui-icon-disk"></p:button>
+				</ui:insert>
+			</div>
+			
+			<div id="rodape">
+				<ui:insert name="rodape">
+					<h5>Copyright</h5>
+				</ui:insert>
+			</div>
+			
+		</div>
+	</h:body>
 </html>

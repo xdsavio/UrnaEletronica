@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+<title>Cadastro</title>
+</h:head>
+<h:body>
+	<h1>CADASTRO</h1>
+	<h:form>
+	<h:panelGrid columns="2">
 
-</body>
+		<p:outputLabel value="Nome:" for="nome" />
+		<p:inputText id="nome" />
+		<p:outputLabel value="Cpf:" for="cpf" />
+		<p:inputText id="cpf" />
+		<p:outputLabel value="Rg:" for="rg" />
+		<p:inputText id="rg" />
+		<p:outputLabel value="Titulo:" for="titulo" />
+		<p:inputText id="titulo" />
+		<p:outputLabel value="Endereço:" for="endereco" />
+		<p:inputText id="endereco" />
+		<p:outputLabel value="Selecione seu sexo:" for="sexo" />
+		
+		<p:selectOneMenu id="sexo" style="width:192px;">
+			<f:selectItem itemLabel="" itemValue="" />
+			<f:selectItem itemLabel="Mulher" itemValue="mulher" />
+			<f:selectItem itemLabel="Homem" itemValue="homem" />
+			<f:selectItem itemLabel="Indefinido" itemValue="indefinido" />
+		</p:selectOneMenu>
+
+	</h:panelGrid>
+	
+	<p:commandButton value="Cadastrar" id="cadastro" actionListener="#" icon="ui-icon-disk" />
+	</h:form>
+</h:body>
 </html>
