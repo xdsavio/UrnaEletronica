@@ -26,7 +26,7 @@ public class SessaoBean {
 		
 		if(eleitor_aux!=null){
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("eleitor", eleitor_aux);
-			FacesContext.getCurrentInstance().getExternalContext().redirect("votar.xhtml");
+			FacesContext.getCurrentInstance().getExternalContext().redirect("sessao1.xhtml");
 		}else{
 			System.out.println("É nulo");
 		}
