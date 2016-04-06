@@ -5,17 +5,21 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<h:meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Urna de Votação - Sessão 1</title>
+	<title>Urna de VotaÃ§Ã£o - SessÃ£o 1</title>
 </h:head>
 <h:body>
-	<h1>Urna Eletrônica - Sessão de Votação 01</h1>
-	<h3>Sessão de Votação 01, para eleitores cadastrados entre as letras A - L.</h3>
+	<h1>Urna EletrÃ´nica - SessÃ£o de VotaÃ§Ã£o </h1>
+	<h3>SessÃ£o de VotaÃ§Ã£o </h3>
 	<h:form id="form">
 		<h:outputText value="Votar : " />
-		<h:inputText id="input" value="${sessao1Bean.userInput}" />
-		<h:commandButton value="Votar" action="${sessao1Bean.submit}"
+		<h:inputText id="input" value="${sessaoBean.userInput}" />
+		<h:commandButton value="Votar" action="${SessaoBean.submit}"
 			onclick="return check();" />
-		<h:outputText value="${sessao1Bean.userInput}" />
+		<h:commandButton value="Branco" action="${SessaoBean.votoBranco}"
+			onclick="return check();" />
+		<h:commandButton value="Finalizar EleiÃ§Ãµes" action="${SessaoBean.encerrar_eleicao}"
+			onclick="return check();" />	
+		<h:outputText value="${SessaoBean.userInput}" />
 
 	</h:form>
 </h:body>
