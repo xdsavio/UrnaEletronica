@@ -1,6 +1,8 @@
 package br.edu.ifpb.urnaeletronica.bean;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.servlet.*;
+
 
 @ManagedBean
 @SessionScoped
@@ -70,7 +72,7 @@ public class SessaoBean {
 	}
 	
 	public void encerrar_eleicao(){
-		
+		response.sendRedirect("cadastrocandidato.xhtml");
 	}
 
 	public Eleitor getEleitor() {
