@@ -72,7 +72,7 @@ public class SessaoBean {
 	}
 	
 	public void encerrar_eleicao(){
-		response.sendRedirect("cadastrocandidato.xhtml");
+		response.sendRedirect("encerrar.xhtml");
 	}
 
 	public Eleitor getEleitor() {
