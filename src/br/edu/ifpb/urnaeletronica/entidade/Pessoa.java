@@ -18,6 +18,17 @@ public abstract class Pessoa {
 	@Column(name = "id_pessoa")	
 	private Integer identidade;
 
+	@Column(name = "num_pessoa")	
+	private Integer numero;
+	
+	public Integer getNumero() {
+		return numero;
+	}
+
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+
 	@Column(name = "nome_pessoa")
 	private String nome;
 

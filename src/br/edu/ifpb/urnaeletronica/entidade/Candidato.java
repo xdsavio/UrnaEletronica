@@ -14,7 +14,7 @@ public class Candidato extends Pessoa{
 		this.cnpj = cnpj;
 	}
 	
-	public int getNumero() {
+	public Integer getNumero() {
 		return numero;
 	}
 	

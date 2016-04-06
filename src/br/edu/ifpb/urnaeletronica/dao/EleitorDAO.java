@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
+import br.edu.ifpb.urnaeletronica.entidade.Candidato;
 import br.edu.ifpb.urnaeletronica.entidade.Eleitor;
 import br.edu.ifpb.urnaeletronica.hibernate.HibernateUtil;
 
@@ -57,4 +58,33 @@ public class EleitorDAO extends GenericDAO<Integer, Eleitor>{
 
 		return argument;
 	}
+	
+	
+	@Override
+	public int insert(Eleitor eleitor) throws HibernateException {
+
+		Session session = HibernateUtil.getSessionFactory().openSession();
+
+		Integer id;
+
+		try {
+
+			session.beginTransaction();
+			id = (Integer) session.save(eleitor);
+			session.getTransaction().commit();
+
+		} catch (HibernateException hibernateException) {
+
+			session.getTransaction().rollback();
+
+			throw new HibernateException(hibernateException);
+
+		} finally {
+
+			session.close();
+		}
+
+		return id;
+	}
+
 }

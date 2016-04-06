@@ -6,6 +6,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+import br.edu.ifpb.urnaeletronica.entidade.Candidato;
 import br.edu.ifpb.urnaeletronica.hibernate.HibernateUtil;
 
 public abstract class GenericDAO<PK, T> {
@@ -143,4 +144,14 @@ public abstract class GenericDAO<PK, T> {
 	public abstract List<T> getAll() throws HibernateException;
 	
 	public abstract Class<?> getEntityClass();
+
+	public T getById(Integer pk) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List getAll1() throws HibernateException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

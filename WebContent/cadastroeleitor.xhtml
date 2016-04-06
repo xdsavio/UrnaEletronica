@@ -15,21 +15,21 @@
 		<p:panelGrid columns="2">
 			
 			<p:outputLabel for="nome" value="Nome:" />
-			<p:inputText id="nome" value="#{PessoaBean.eleitor.nome}" />
+			<p:inputText id="nome" value="#{EleitorBean.eleitor.nome}" />
 
-			<p:outputLabel for="senha" value="Endereço:" />
-			<p:inputText id="endereco" value="#{PessoaBean.eleitor.endereco}" />
+			<p:outputLabel for="endereco" value="Endereço:" />
+			<p:inputText id="endereco" value="#{EleitorBean.eleitor.endereco}" />
 			
 			<p:outputLabel for="cpf" value="CPF:" />
-			<p:spinner id="cpf" value="#{PessoaBean.eleitor.cpf}" />
+			<p:spinner id="cpf" value="#{EleitorBean.eleitor.cpf}" />
 			
 			<p:outputLabel for="id" value="Identidade:" />
-			<p:spinner id="id" value="#{PessoaBean.eleitor.identidade}" />
+			<p:spinner id="id" value="#{EleitorBean.eleitor.identidade}" />
 
 			<p:outputLabel for="titulo" value="Titulo de Eleitor:" />
-			<p:spinner id="titulo" value="#{PessoaBean.eleitor.titulo}" />
+			<p:spinner id="titulo" value="#{EleitorBean.eleitor.titulo}" />
 			
-			 <p:commandButton  value="Cadastrar" icon="ui-icon-star" action="#{PessoaBean.cadastraEleitor}" update="messages">
+			 <p:commandButton  value="Cadastrar" icon="ui-icon-star" action="#{EleitorBean.cadastraEleitor}" action="#{PessoaBean.contarPessoa}" update="messages">
                   </p:commandButton>
    
 			</p:panelGrid>
