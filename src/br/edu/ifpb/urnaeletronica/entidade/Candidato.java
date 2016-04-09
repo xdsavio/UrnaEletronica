@@ -1,5 +1,8 @@
 package br.edu.ifpb.urnaeletronica.entidade;
 
+@Entity
+@Table(name = "tb_candidato")
+@NamedQuery(name = "Candidato.getAll", query = "from Candidato")
 public class Candidato extends Pessoa{
 	private String cnpj;
 	private int numero;
