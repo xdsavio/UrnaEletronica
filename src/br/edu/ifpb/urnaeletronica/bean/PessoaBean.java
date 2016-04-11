@@ -43,7 +43,7 @@ public class PessoaBean {
 			Query query = (Query) session.createQuery(hql);
 			((org.hibernate.Query) query).setParameter("id_pessoa", id_pessoa);
 
-			eleitor = (Eleitor[])  query.eleitor();
+			eleitor = (Eleitor[])  (query).eleitor();
 
 		} catch (HibernateException hibernateException) {
 

@@ -18,24 +18,24 @@ public class IndexBean {
 
 	}
 	
-	public void toCadastrarCandidato (){
-		response.sendRedirect("cadastrocandidato.xhtml");
+	public String toCadastrarCandidato (){
+		return("cadastrocandidato.xhtml");
 	}
 	
-	public void toCadastrarEleitor (){
-		response.sendRedirect("cadastroeleitor.xhtml");
+	public String toCadastrarEleitor (){
+		return ("cadastroeleitor.xhtml");
 	}	
 	
-	public void toDeletar (){
-		response.sendRedirect("delete.xhtml");
+	public String toDeletar (){
+		return("delete.xhtml");
 	}
 	
-	public void toEntrarVotacao (){
-		response.sendRedirect("entrarvotacao.xhtml");
+	public String toEntrarVotacao (){
+		return ("entrarvotacao.xhtml");
 	}
 	
-	public void toVotacao (){
-		response.sendRedirect("votacao.xhtml");
+	public String toVotacao (){
+		return("votacao.xhtml");
 	}
 	
 	public void setOutcome(String outcome) {

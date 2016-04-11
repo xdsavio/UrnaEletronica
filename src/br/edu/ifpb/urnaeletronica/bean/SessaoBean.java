@@ -1,7 +1,17 @@
 package br.edu.ifpb.urnaeletronica.bean;
+import java.io.IOException;
+import java.sql.Date;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.servlet.*;
+
+import br.edu.ifpb.urnaeletronica.dao.CandidatoDAO;
+import br.edu.ifpb.urnaeletronica.dao.EleitorDAO;
+import br.edu.ifpb.urnaeletronica.entidade.Candidato;
+import br.edu.ifpb.urnaeletronica.entidade.Eleitor;
+import br.edu.ifpb.urnaeletronica.entidade.Voto;
 
 
 @ManagedBean
@@ -22,7 +32,7 @@ public class SessaoBean {
 
 	public void verificarTitulo() throws IOException{
 		EleitorDAO eleitorDAO = new EleitorDAO();
-		Eleitor eleitor_aux = eleitorDAO.getByTitulo(eleitor.getTitulo());
+		Eleitor eleitor_aux = eleitorDAO.getByTitulo(eleitor.getTituloVotacao());
 		
 		if(eleitor_aux!=null){
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("eleitor", eleitor_aux);
@@ -71,8 +81,8 @@ public class SessaoBean {
 		votoDAO.insert(voto);
 	}
 	
-	public void encerrar_eleicao(){
-		response.sendRedirect("encerrar.xhtml");
+	public String encerrar_eleicao(){
+		return ("encerrar.xhtml");
 	}
 
 	public Eleitor getEleitor() {

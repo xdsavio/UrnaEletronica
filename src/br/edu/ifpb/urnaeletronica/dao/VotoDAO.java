@@ -136,10 +136,10 @@ public class VotoDAO extends GenericDAO<Integer, Voto>{
 			String hql = "from Voto as a"
 					+ " where a.votoCandidato = :numero";
 
-			Query query = session.createQuery(hql);
-			query.setParameter("numero", 0);
+			Query query = (Query) session.createQuery(hql);
+			((org.hibernate.Query) query).setParameter("numero", 0);
 
-			votos = (List<Voto>) query.list();
+			votos = (List<Voto>) ((org.hibernate.Query) query).list();
 
 		} catch (HibernateException hibernateException) {
 

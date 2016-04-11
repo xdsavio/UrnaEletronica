@@ -1,5 +1,8 @@
 package br.edu.ifpb.urnaeletronica.entidade;
 
+import javax.persistence.Entity;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_eleitor")

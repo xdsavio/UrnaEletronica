@@ -1,5 +1,9 @@
 package br.edu.ifpb.urnaeletronica.entidade;
 
+import javax.persistence.Entity;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
 @Entity
 @Table(name = "tb_candidato")
 @NamedQuery(name = "Candidato.getAll", query = "from Candidato")
@@ -40,5 +44,7 @@ public class Candidato extends Pessoa{
 	public void setPartido(String partido) {
 		this.partido = partido;
 	}
+
+	
 
 }

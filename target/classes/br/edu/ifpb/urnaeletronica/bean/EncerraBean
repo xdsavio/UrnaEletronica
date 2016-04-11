@@ -1,0 +1,26 @@
+package br.edu.ifpb.urnaeletronica.bean;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.servlet.*;
+
+@ManagedBean
+@SessionScoped
+
+public class EncerraBean {
+
+	private String outcome = "encerra";
+
+	private String userInput = "";
+
+	public String getOutcome() {
+
+		return outcome;
+
+	}
+	
+	public void toEncerrar (String senha){
+	  if(senha=='irelia'){
+		  response.sendRedirect(" sessao2.xhtml");
+	  }
+	}
+	}

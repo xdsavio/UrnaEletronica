@@ -1,4 +1,4 @@
-package br.edu.ifpb.entidade;
+package br.edu.ifpb.urnaeletronica.entidade;
 
 
 public class Apuracao {
@@ -6,11 +6,11 @@ public class Apuracao {
 	
 	private int id;
 	
-	private int quantidadeVotos;
+	private int NumVotos;
 
-	private int quantidadeBrancos;
+	private int NumBrancos;
 	
-	private int quantidadeNulos;
+	private int NumNulos;
 		
 	private Candidato prefeitoMaisVotado;
 	
@@ -24,11 +24,11 @@ public class Apuracao {
 	
 	private Candidato presidenteMenosVotado;
 	
-	private Candidato prefeitoEleito;
+	private Candidato prefeitoVencedor;
 	
-	private Candidato governadorEleito;
+	private Candidato governadorVencedor;
 	
-	private Candidato presidenteEleito;	
+	private Candidato presidenteVencedor;	
 	
 
 	public int getId() {
@@ -39,28 +39,28 @@ public class Apuracao {
 		this.id = id;
 	}
 
-	public int getQuantidadeVotos() {
-		return quantidadeVotos;
+	public int getNumVotos() {
+		return NumVotos;
 	}
 
-	public void setQuantidadeVotos(int quantidadeVotos) {
-		this.quantidadeVotos = quantidadeVotos;
+	public void setNumVotos(int NumVotos) {
+		this.NumVotos = NumVotos;
 	}
 
-	public int getQuantidadeBrancos() {
-		return quantidadeBrancos;
+	public int getNumBrancos() {
+		return NumBrancos;
 	}
 
-	public void setQuantidadeBrancos(int quantidadeBrancos) {
-		this.quantidadeBrancos = quantidadeBrancos;
+	public void setNumBrancos(int NumBrancos) {
+		this.NumBrancos = NumBrancos;
 	}
 
-	public int getQuantidadeNulos() {
-		return quantidadeNulos;
+	public int getNumNulos() {
+		return NumNulos;
 	}
 
-	public void setQuantidadeNulos(int quantidadeNulos) {
-		this.quantidadeNulos = quantidadeNulos;
+	public void setNumNulos(int NumNulos) {
+		this.NumNulos = NumNulos;
 	}
 
 	public Candidato getPrefeitoMaisVotado() {
@@ -111,28 +111,29 @@ public class Apuracao {
 		this.presidenteMenosVotado = presidenteMenosVotado;
 	}
 
-	public Candidato getPrefeitoEleito() {
-		return prefeitoEleito;
+	public Candidato getPrefeitoVencedor() {
+		return prefeitoVencedor;
 	}
 
-	public void setPrefeitoEleito(Candidato prefeitoEleito) {
-		this.prefeitoEleito = prefeitoEleito;
+	public void setPrefeitoVencedor(Candidato prefeitoVencedor) {
+		this.prefeitoVencedor = prefeitoVencedor;
 	}
 
-	public Candidato getGovernadorEleito() {
-		return governadorEleito;
+	public Candidato getGovernadorVencedor() {
+		return governadorVencedor;
 	}
 
-	public void setGovernadorEleito(Candidato governadorEleito) {
-		this.governadorEleito = governadorEleito;
+	public void setGovernadorVencedor(Candidato governadorVencedor) {
+		this.governadorVencedor = governadorVencedor;
 	}
 
-	public Candidato getPresidenteEleito() {
-		return presidenteEleito;
+	public Candidato getPresidenteVencedor() {
+		return presidenteVencedor;
 	}
 
-	public void setPresidenteEleito(Candidato presidenteEleito) {
-		this.presidenteEleito = presidenteEleito;
+	public void setPresidenteVencedor(Candidato presidenteVencedor) {
+		this.presidenteVencedor = presidenteVencedor;
 	}
+}
 
 	

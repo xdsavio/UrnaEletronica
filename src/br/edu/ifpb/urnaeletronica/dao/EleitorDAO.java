@@ -87,4 +87,9 @@ public class EleitorDAO extends GenericDAO<Integer, Eleitor>{
 		return id;
 	}
 
+	public Eleitor getByTitulo(String tituloVotacao) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
